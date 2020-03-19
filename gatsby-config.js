@@ -2,13 +2,13 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { spaceId, accessToken, host, environment } = process.env;
+const { spaceId, accessToken, environment } = process.env;
 
 module.exports = {
   siteMetadata: {
-    title: `Rohit Gupta`,
-    description: `Personal Site`,
-    author: `@rohitguptab`
+    title: `IES`,
+    description: `Organisational website`,
+    author: `@marcochalub`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,8 +24,9 @@ module.exports = {
       options: {
         spaceId,
         accessToken,
-        host,
-        environment
+        environment,
+        host:`cdn.contentful.com`,
+        downloadLocal: true
       }
     },
     `gatsby-transformer-sharp`,
@@ -34,8 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rohit Gupta`,
-        short_name: `Rohit Gupta`,
+        name: `Marco Santos Chalub`,
+        short_name: `Marco Santos Chalub`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#333`,
