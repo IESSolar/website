@@ -25,8 +25,7 @@ module.exports = {
         spaceId,
         accessToken,
         environment,
-        host:`cdn.contentful.com`,
-        downloadLocal: true
+        host:`cdn.contentful.com`
       }
     },
     `gatsby-transformer-sharp`,
