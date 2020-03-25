@@ -53,14 +53,6 @@ export default class Banner extends Component {
                   rel="noopener noreferrer"
                 ></a>
               </li>
-              <li>
-                <a
-                  className="fab fa-github"
-                  href={data.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
             </ul>
           </div>
         </div>
