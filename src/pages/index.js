@@ -16,15 +16,15 @@ import Photos from "../components/photos";
 const IndexPage = ({ data }) => (
   <Layout header="home">
     <SEO
-      title={data.contentfulAboutMe.designation}
+      title={data.contentfulAboutUs.designation}
       keywords={[`IES`, `Renewable`, `Solar`]}
     />
-    <Banner data={data.contentfulAboutMe}></Banner>
+    <Banner data={data.contentfulAboutUs}></Banner>
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "About")
       .map(t => {
-        return <About data={data.contentfulAboutMe}></About>;
+        return <About data={data.contentfulAboutUs}></About>;
       })}
 
     {data.contentfulSiteInformation.menus
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Contact")
       .map(t => {
-        return <Contact data={data.contentfulAboutMe.gmail}></Contact>;
+        return <Contact data={data.contentfulAboutUs.gmail}></Contact>;
       })}
   </Layout>
 );
@@ -71,7 +71,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query AboutQuery {
-    contentfulAboutMe {
+    contentfulAboutUs {
       name
       photo {
         file {
@@ -88,10 +88,7 @@ export const pageQuery = graphql`
         }
       }
       designation
-      age
       facebook
-      github
-      gmail
       id
       instagram
       linkdin
