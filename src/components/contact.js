@@ -22,7 +22,7 @@ export default class Contact extends Component {
             </div>
             <div>
               <label>
-                Your Email: <input type="email" name="email" />
+                Your Email: <input type="email" name="_replyto" />
               </label>
             </div>
             <div>

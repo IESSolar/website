@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Contact")
       .map(t => {
-        return <Contact data={data.contentfulAboutUs.email}></Contact>;
+        return <Contact data={data.contentfulAboutUs.endpoint}></Contact>;
       })}
   </Layout>
 );
@@ -89,6 +89,7 @@ export const pageQuery = graphql`
       }
       designation
       facebook
+      endPoint
       id
       instagram
       linkdin
