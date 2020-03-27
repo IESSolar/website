@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Contact")
       .map(t => {
-        return <Contact data={data.contentfulAboutUs.gmail}></Contact>;
+        return <Contact data={data.contentfulAboutUs.email}></Contact>;
       })}
   </Layout>
 );
