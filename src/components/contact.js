@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Contact extends Component {
   render() {
-    console.log("const:", this.props.data);
+    console.log("e-mail:", this.props.data);
     return (
       <div className="contact section" id="Contact">
         <div className="container">
