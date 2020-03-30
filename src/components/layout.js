@@ -39,7 +39,7 @@ const Layout = ({ children, header }) => (
         <div>
           <main id="home">{children}</main>
         </div>
-        <Footer siteName={data.contentfulSiteInformation.siteName} />
+        <Footer siteName={data.contentfulSiteInformation.siteName, data.contentfulAboutUs} />
       </>
     )}
   />
