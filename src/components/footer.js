@@ -2,16 +2,15 @@ import React, { Component } from "react";
 
 export default class footer extends Component {
   render() {
-    const { data } = this.props;
     return (
       <div className="site-footer" id="footer">
         <div className="container">
-          <span>{data.siteName}</span>
+          <span>{this.props.siteName}</span>
           <ul className="social">
               <li>
                 <a
                   className="fab fa-facebook-f"
-                  href={data.facebook}
+                  href={this.props.aboutUs.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>
@@ -19,7 +18,7 @@ export default class footer extends Component {
               <li>
                 <a
                   className="fab fa-twitter"
-                  href={data.twitter}
+                  href={this.props.aboutUs.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>
@@ -27,7 +26,7 @@ export default class footer extends Component {
               <li>
                 <a
                   className="fab fa-instagram"
-                  href={data.instagram}
+                  href={this.props.aboutUs.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>
@@ -35,7 +34,7 @@ export default class footer extends Component {
               <li>
                 <a
                   className="fab fa-linkedin-in"
-                  href={data.linkdin}
+                  href={this.props.aboutUs.linkdin}
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>
