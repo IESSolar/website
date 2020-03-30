@@ -35,6 +35,7 @@ const Layout = ({ children, header }) => (
           data={data.contentfulSiteInformation}
           siteTitle={data.contentfulSiteInformation.siteName}
           header={header}
+          
         />
         <div>
           <main id="home">{children}</main>
