@@ -18,40 +18,7 @@ export default class Banner extends Component {
               {data.bannerList.map((item, index) => {
                 return <li key={index}>{item}</li>;
               })}
-            </ul>
-            <ul className="social">
-              <li>
-                <a
-                  className="fab fa-facebook-f"
-                  href={data.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-twitter"
-                  href={data.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-instagram"
-                  href={data.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-linkedin-in"
-                  href={data.linkdin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
+            <h3>{data.catchingSentence}.</h3>
             </ul>
           </div>
         </div>

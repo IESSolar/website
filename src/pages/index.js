@@ -88,6 +88,7 @@ export const pageQuery = graphql`
         }
       }
       designation
+      catchingSentence
       facebook
       endPoint
       id
