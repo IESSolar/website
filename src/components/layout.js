@@ -27,6 +27,13 @@ const Layout = ({ children, header }) => (
           }
           menus
         }
+        contentfulAboutUs {
+          name
+          facebook
+          instagram
+          linkdin
+          twitter
+        }
       }
     `}
     render={data => (
@@ -35,12 +42,14 @@ const Layout = ({ children, header }) => (
           data={data.contentfulSiteInformation}
           siteTitle={data.contentfulSiteInformation.siteName}
           header={header}
-          
         />
         <div>
           <main id="home">{children}</main>
         </div>
-        <Footer siteName={data.contentfulSiteInformation.siteName, data.contentfulAboutUs} />
+        <Footer
+          siteName={data.contentfulSiteInformation.siteName}
+          aboutUs={data.contentfulAboutUs}
+        />
       </>
     )}
   />
