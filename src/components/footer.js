@@ -2,10 +2,11 @@ import React, { Component } from "react";
 
 export default class footer extends Component {
   render() {
+    const { data } = this.props;
     return (
       <div className="site-footer" id="footer">
         <div className="container">
-          <span>{this.props.siteName}</span>
+          <span>{data.siteName}</span>
           <ul className="social">
               <li>
                 <a
