@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rohit Gupta`,
-        short_name: `Rohit Gupta`,
+        name: `Intelligent Energy Solutions`,
+        short_name: `IES`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#333`,
