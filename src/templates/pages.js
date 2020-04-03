@@ -8,9 +8,9 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Share from "../components/share";
 
-export default class blogPost extends Component {
+export default class page extends Component {
   render() {
-    const data = this.props.data.contentfulBlogs;
+    const data = this.props.data.contentfulPages;
     const disqusShortname = "RohitGupta";
     const disqusConfig = {
       identifier: data.id,
