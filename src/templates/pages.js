@@ -11,7 +11,7 @@ import Share from "../components/share";
 export default class page extends Component {
   render() {
     const data = this.props.data.contentfulPages;
-    const disqusShortname = "RohitGupta";
+    const disqusShortname = "IES";
     const disqusConfig = {
       identifier: data.id,
       title: data.title
@@ -37,7 +37,7 @@ export default class page extends Component {
             `${data.title}`
           ]}
         />
-        <div className="site-container blog-post">
+        <div className="site-container page">
           <div className="container">
             <Img
               className="feature-img"
@@ -78,8 +78,8 @@ export default class page extends Component {
 }
 
 export const pageQuery = graphql`
-  query SinglePostQuery($slug: String!) {
-    contentfulBlogs(slug: { eq: $slug }) {
+  query SinglePageQuery($slug: String!) {
+    contentfulPages(slug: { eq: $slug }) {
       id
       title
       slug
