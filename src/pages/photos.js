@@ -88,8 +88,8 @@ export default class PhotosPage extends Component {
   }
 }
 export const pageQuery = graphql`
-  query PhotosPageQuery {
-    contentfulPhotos {
+  query MembershipsPageQuery {
+    contentfulMemberships {
       photos {
         file {
           url

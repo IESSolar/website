@@ -11,7 +11,7 @@ import Work from "../components/work";
 import Blogs from "../components/blogs";
 import Testimonial from "../components/testimonial";
 import Contact from "../components/contact";
-import Photos from "../components/photos";
+import Memberships from "../components/memberships";
 
 const IndexPage = ({ data }) => (
   <Layout header="home">
@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Photos")
       .map(t => {
-        return <Photos data={data.contentfulPhotos}></Photos>;
+        return <Memberships data={data.contentfulPhotos}></Memberships>;
       })}
 
     {data.contentfulSiteInformation.menus
@@ -189,7 +189,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    contentfulPhotos {
+    contentfulMemberships {
       photos {
         fluid(maxWidth: 600) {
           base64

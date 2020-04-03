@@ -30,21 +30,21 @@ var settings = {
   ]
 };
 
-export default class Photos extends Component {
+export default class Memberships extends Component {
   render() {
     const { data } = this.props;
 
     return (
-      <div className="photos section" id="Photos">
+      <div className="memberships section" id="Memberships">
         <div className="container">
           <div className="section-head">
             <h2>Photos</h2>
           </div>
-          <div className="slider-section photos-list">
+          <div className="slider-section memberships-list">
             <Slider {...settings}>
-              {data.photos.slice(0, 9).map((item, index) => {
+              {data.memberships.slice(0, 9).map((item, index) => {
                 return (
-                  <div key={index} className="photos-item">
+                  <div key={index} className="memberships-item">
                     <Img
                       fixed={item.fluid}
                       objectFit="cover"
@@ -56,8 +56,8 @@ export default class Photos extends Component {
             </Slider>
           </div>
           <div className="see-more">
-            <Link to="/photos">
-              <span>More Photo</span>
+            <Link to="/memberships">
+              <span>More Memberships</span>
             </Link>
           </div>
         </div>

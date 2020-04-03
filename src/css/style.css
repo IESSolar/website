@@ -123,11 +123,14 @@ h2:after,
 .work-list .item .inner .gatsby-image-wrapper{width:100%;height:200px}
 .work-list .item .inner a{position:relative;float:left;width:100%}
 .work-list .item .inner .name{position:absolute;bottom:5px;left:0;right:0;width:100%;background:#333333b3;padding:10px 20px;color:#fff;text-shadow:1px 1px 4px #333}
-.photos-item .gatsby-image-wrapper{width:100%;height:200px}
+.memberships-item .gatsby-image-wrapper{width:100%;height:200px}
 .site-container{padding:100px 0 20px 0}
 .blog-post .feature-img{width:100%;height:600px}
 .blog-post .details .date{margin-bottom:40px;display:block}
 .blog-post .details{padding:20px 0}
+.page .feature-img{width:100%;height:600px}
+.page .details .date{margin-bottom:40px;display:block}
+.page .details{padding:20px 0}
 .post-social{margin-bottom:40px}
 .post-social button{text-decoration:none;width:auto;height:auto;border:1px solid #333!important;color:#333!important;position:relative;overflow:hidden;padding:8px 20px!important;display:inline-block;font-weight:600;margin-right:10px}
 .post-social button:after{content:"";background:#333;position:absolute;top:-100%;left:0;-webkit-transition:0.3s all;transition:0.3s all;height:100%;width:100%;z-index:0}
@@ -135,18 +138,18 @@ h2:after,
 .post-social button span{position:relative;z-index:1}
 .post-social button:hover span{color:#fff}
 .post-social button span.icon{margin-right:5px}
-.photos-page-list{display:flex;justify-content:flex-start;flex-wrap:wrap;padding:0;margin:0 -5px;list-style:none}
-.photos-page-list .item{width:33.33%;padding:0 5px;margin-bottom:10px}
-.photos-page-list .item .gatsby-image-wrapper{width:100%;height:200px}
-.photos-page-list .item .inner{display:flex;cursor:pointer}
+.memberships-page-list{display:flex;justify-content:flex-start;flex-wrap:wrap;padding:0;margin:0 -5px;list-style:none}
+.memberships-page-list .item{width:33.33%;padding:0 5px;margin-bottom:10px}
+.memberships-page-list .item .gatsby-image-wrapper{width:100%;height:200px}
+.memberships-page-list .item .inner{display:flex;cursor:pointer}
 .work-list .item img{width:100%!important;-webkit-transition:0.3s all!important;transition:0.3s all!important}
 .work-list .item .inner:hover img{-webkit-transform:scale(1.1);transform:scale(1.1)}
 .blogs-list .item:nth-child(5n+1),
 .blogs-list .item:nth-child(5n+2){width:50%}
 .blogs-list .item:nth-child(5n+1) .gatsby-image-wrapper,
 .blogs-list .item:nth-child(5n+2) .gatsby-image-wrapper{height:300px}
-.photos-list{margin-bottom:20px}
-.photos-list .slick-dots{bottom:-20px;margin:0}
+.memberships-list{margin-bottom:20px}
+.memberships-list .slick-dots{bottom:-20px;margin:0}
 .responsive-menu{width:30px;height:25px;display:none;justify-content:center;align-items:center}
 .responsive-menu span{background:#fff;display:block;height:2px;position:relative;transition:background .2s ease-out;width:18px}
 .responsive-menu span:after{top:-5px}
@@ -172,19 +175,26 @@ h2:after,
 .blog-post .details h3{font-size:18px}
 .blog-post .details h4{font-size:16px}
 .blog-post .details ul li{font-size:14px}
-.photos-list .slick-list .slick-track{margin:0 -5px}
-.photos-list .slick-list .slick-track .slick-slide{padding:0 5px}
+.page .details .title{font-size:26px;margin-bottom:20px}
+.page .details .date{font-size:14px;margin-bottom:30px}
+.page .details h2{font-size:22px;line-height:26px;margin-bottom:20px}
+.page .details h3{font-size:18px}
+.page .details h4{font-size:16px}
+.page .details ul li{font-size:14px}
+.memberships-list .slick-list .slick-track{margin:0 -5px}
+.memberships-list .slick-list .slick-track .slick-slide{padding:0 5px}
 code{background-color:rgba(0,0,0,.04);border-radius:3px;margin-bottom:30px;display:block;padding:15px!important}
-.photos-item img,
-.photos-page-list .item img{-webkit-transition:all .3s!important;transition:all .3s!important}
-.photos-item img:hover,
-.photos-page-list .item img:hover{-webkit-transform:scale(1.1)!important;transform:scale(1.1)!important}
+.memberships-item img,
+.memberships-page-list .item img{-webkit-transition:all .3s!important;transition:all .3s!important}
+.memberships-item img:hover,
+.memberships-page-list .item img:hover{-webkit-transform:scale(1.1)!important;transform:scale(1.1)!important}
 @media only screen and (max-width:991px){
     .blogs-list .item{width:50%!important}
     .blogs-list .item .inner .gatsby-image-wrapper{height:200px!important}
     .work-list .item{width:50%}
-    .photos-page-list .item{width:50%}
+    .memberships-page-list .item{width:50%}
     .blog-post .feature-img{height:400px}
+    .page .feature-img{height:400px}
 }
 @media only screen and (max-width:767px){
     .site-header .header-main .logo{width:90%;width:calc(100% - 30px)}
@@ -206,12 +216,13 @@ code{background-color:rgba(0,0,0,.04);border-radius:3px;margin-bottom:30px;displ
     .site-header .header-main .menu ul li a{padding:6px 20px;display:inline-block;width:100%;border-bottom:1px solid #fff;box-sizing:border-box;font-size:14px}
 }
 @media only screen and (max-width:568px){
-    .photos-page-list .item{width:100%}
+    .memberships-page-list .item{width:100%}
     .work-list .item{width:100%}
     .blogs-list .item{width:100%!important}
     .banner .banner-details h1{font-size:34px;margin-bottom:10px}
     .banner .banner-details span{font-size:19px;margin-bottom:0}
     .blog-post .feature-img{height:300px}
+    .page .feature-img{height:300px}
     .post-social button{margin-bottom:10px;padding:5px 10px!important;font-size:12px!important}
     .blogs-list .item .inner .details .date{font-size:12px}
     .blogs-list .item .inner .details .title{font-size:20px}
