@@ -29,8 +29,8 @@ export default class PhotosPage extends Component {
             <div className="section-head">
               <h1 className="line-heading h2">Photos</h1>
             </div>
-            <ul className="photos-page-list">
-              {data.contentfulPhotos.photos.map((item, index) => {
+            <ul className="memberships-page-list">
+              {data.contentfulMemberships.photos.map((item, index) => {
                 return (
                   <li key={index} className="item">
                     <div
@@ -73,7 +73,7 @@ export default class PhotosPage extends Component {
                     }}
                   ></i>
                   <img
-                    src={data.contentfulPhotos.photos[selectedItem].file.url}
+                    src={data.contentfulMemberships.photos[selectedItem].file.url}
                     alt="popup-img"
                   />
                 </div>
