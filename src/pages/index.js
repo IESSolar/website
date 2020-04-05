@@ -21,31 +21,31 @@ const IndexPage = ({ data }) => (
     />
     <Banner data={data.contentfulAboutUs}></Banner>
 
-    {data.contentfulSiteInformation.menus
+    {data.contentfulSiteInformation.homeSections
       .filter(item => item === "About")
       .map(t => {
         return <About data={data.contentfulAboutUs}></About>;
       })}
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === "Service")
+    {data.contentfulSiteInformation.homeSections
+      .filter(item => item === "What We Do")
       .map(t => {
         return <Service data={data.allContentfulService}></Service>;
       })}
 
-    {data.contentfulSiteInformation.menus
+    {data.contentfulSiteInformation.homeSections
       .filter(item => item === "Blogs")
       .map(t => {
         return <Blogs data={data.allContentfulBlogs}></Blogs>;
       })}
 
-    {data.contentfulSiteInformation.menus
+    {data.contentfulSiteInformation.homeSections
       .filter(item => item === "Work")
       .map(t => {
         return <Work data={data.allContentfulWorks}></Work>;
       })}
 
-    {data.contentfulSiteInformation.menus
+    {data.contentfulSiteInformation.homeSections
       .filter(item => item === "Testimonials")
       .map(t => {
         return (
@@ -53,14 +53,14 @@ const IndexPage = ({ data }) => (
         );
       })}
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === "Photos")
+    {data.contentfulSiteInformation.homeSections
+      .filter(item => item === "Memberships")
       .map(t => {
         return <Memberships data={data.contentfulPhotos}></Memberships>;
       })}
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === "Contact")
+    {data.contentfulSiteInformation.homeSections
+      .filter(item => item === "Contact Us")
       .map(t => {
         return <Contact data={data.contentfulAboutUs.endpoint}></Contact>;
       })}
@@ -203,7 +203,7 @@ export const pageQuery = graphql`
       }
     }
     contentfulSiteInformation {
-      menus
+      homeSections
     }
   }
 `;
