@@ -32,12 +32,9 @@ export default class page extends Component {
       <Layout>
         <SEO
           title={data.title}
-          keywords={[
-            `IES`, `Renewable`, `Solar`, `Energy`, `Construction`, `Trading`, `Research`,
-            `${data.title}`
-          ]}
+          keywords={[`IES`, `Renewable`, `Solar`, `Energy`, `${data.title}`]}
         />
-        <div className="site-container page">
+        <div className="site-container f">
           <div className="container">
             <Img
               className="feature-img"

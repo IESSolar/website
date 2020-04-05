@@ -5,31 +5,26 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default class MembershipsPage extends Component {
+export default class ConstructionPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activePopup: false,
-      selectedItem: 0
-    };
   }
 
   render() {
     const { data } = this.props;
-    const { activePopup, selectedItem } = this.state;
 
     return (
       <Layout>
         <SEO
-          title="Photos"
-          keywords={[`IES`, `Renewable`, `Solar`, `Energy`, `Construction`, `Trading`, `Research`, `Photos`]}
+          title="Construction"
+          keywords={[`IES`, `Renewable`, `Solar`, `Energy`, `Construction`]}
         />
-        <div className="site-container blogs-page" id="Blogs">
+        <div className="site-container blogs-page" id="Construcion">
           <div className="container">
             <div className="section-head">
-              <h1 className="line-heading h2">Memberships</h1>
+              <h1 className="line-heading h2">Construcion</h1>
             </div>
-            <ul className="memberships-page-list">
+            {/* <ul className="memberships-page-list">
               {data.contentfulMemberships.photos.map((item, index) => {
                 return (
                   <li key={index} className="item">
@@ -51,36 +46,7 @@ export default class MembershipsPage extends Component {
                   </li>
                 );
               })}
-            </ul>
-            {activePopup ? (
-              <div className="rg-popup">
-                <span
-                  className="popup-layer"
-                  onClick={() => {
-                    this.setState({
-                      activePopup: false
-                    });
-                  }}
-                ></span>
-
-                <div className="popup-inner">
-                  <i
-                    className="fas fa-times"
-                    onClick={() => {
-                      this.setState({
-                        activePopup: false
-                      });
-                    }}
-                  ></i>
-                  <img
-                    src={data.contentfulMemberships.photos[selectedItem].file.url}
-                    alt="popup-img"
-                  />
-                </div>
-              </div>
-            ) : (
-              ""
-            )}
+            </ul> */}
           </div>
         </div>
       </Layout>
@@ -88,7 +54,7 @@ export default class MembershipsPage extends Component {
   }
 }
 export const pageQuery = graphql`
-  query MembershipsPageQuery {
+  query ConstructionPageQuery {
     contentfulMemberships {
       photos {
         file {
