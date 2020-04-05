@@ -38,11 +38,11 @@ export default class Memberships extends Component {
       <div className="memberships section" id="Memberships">
         <div className="container">
           <div className="section-head">
-            <h2>Photos</h2>
+            <h2>Memberships</h2>
           </div>
           <div className="slider-section memberships-list">
             <Slider {...settings}>
-              {data.memberships.slice(0, 9).map((item, index) => {
+              {data.photos.slice(0, 9).map((item, index) => {
                 return (
                   <div key={index} className="memberships-item">
                     <Img

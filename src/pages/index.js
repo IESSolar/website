@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.homeSections
       .filter(item => item === "Memberships")
       .map(t => {
-        return <Memberships data={data.contentfulPhotos}></Memberships>;
+        return <Memberships data={data.contentfulMemberships}></Memberships>;
       })}
 
     {data.contentfulSiteInformation.homeSections
