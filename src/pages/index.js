@@ -114,7 +114,7 @@ export const pageQuery = graphql`
       }
       bannerList
     }
-    allContentfulService {
+    allContentfulService(filter: {node_locale: {eq: "en-AU"}}) {
       edges {
         node {
           title
