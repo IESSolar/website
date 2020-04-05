@@ -7,12 +7,12 @@ export default class service extends Component {
       <div className="service section" id="Service">
         <div className="container">
           <div className="section-head">
-            <h2>What we do</h2>
+            <h2>What We Do</h2>
           </div>
           <div className="row">
             {data.edges.map((item, index) => {
               return (
-                <div key={index} className="col-md-4 mb-3">
+                <div key={index} className="col-md-3 mb-3">
                   <div className="service-main">
                     <h3>{item.node.title}</h3>
                     <div
