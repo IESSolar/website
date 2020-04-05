@@ -16,7 +16,7 @@ export default class Blogs extends Component {
           title="Blogs"
           keywords={[`IES`, `Renewable`, `Solar`, `Energy`, `Construction`, `Trading`, `Blog`]}
         />
-        <div className="site-container blogs-page" id="Blogs">
+        <div className="site-container page" id="Blogs">
           <div className="container">
             <div className="section-head">
               <h1 className="line-heading h2">Blogs</h1>
