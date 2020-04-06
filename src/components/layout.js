@@ -27,6 +27,26 @@ const Layout = ({ children, header }) => (
           }
           menus
         }
+        allContentfulPages {
+          edges {
+            node {
+              title
+              slug
+              featureImage {
+                fluid(maxWidth: 1500) {
+                  base64
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                }
+              }
+              createdAt
+            }
+          }
+        }
         contentfulAboutUs {
           name
           facebook
@@ -39,7 +59,7 @@ const Layout = ({ children, header }) => (
     render={data => (
       <>
         <Header
-          data={data.contentfulSiteInformation}
+          data={data}
           siteTitle={data.contentfulSiteInformation.siteName}
           header={header}
         />

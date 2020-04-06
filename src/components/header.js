@@ -18,10 +18,10 @@ export default class Header extends Component {
           <div className="header-main">
             <div className="logo">
               <Link to="/">
-                {data.logo.file.url ? (
-                  <img src={data.logo.file.url} alt="logo" />
+                {data.contentfulSiteInformation.logo.file.url ? (
+                  <img src={data.contentfulSiteInformation.logo.file.url} alt="logo" />
                 ) : (
-                  <span>{data.siteName}</span>
+                  <span>{data.contentfulSiteInformation.siteName}</span>
                 )}
               </Link>
             </div>
@@ -47,97 +47,15 @@ export default class Header extends Component {
                   <li>
                     <Link to="/">Home</Link>
                   </li>
-                  {data.menus
-                    .filter(item => item === "About")
-                    .map(t => {
+                  {data.contentfulSiteInformation.menus.map((menu, index) => {
+                    let page = data.allContentfulPages.edges.find(item => item.node.title === menu);
+                    if(page) {
                       return (
-                        <li>
-                          <Link to={`/#About`}>About</Link>
+                        <li key={index}>
+                          <Link to={page.node.slug}>{page.node.title}</Link>
                         </li>
-                      );
-                    })}
-                    {data.menus
-                      .filter(item => item === "Construction")
-                      .map(t => {
-                        return (
-                          <li>
-                            <Link to={`/construction`}>Construction</Link>
-                          </li>
-                        );
-                      })}
-                      {data.menus
-                        .filter(item => item === "Renewable")
-                        .map(t => {
-                          return (
-                            <li>
-                              <Link to={`/renewable`}>Renewable</Link>
-                            </li>
-                          );
-                        })}
-                        {data.menus
-                          .filter(item => item === "Trading")
-                          .map(t => {
-                            return (
-                              <li>
-                                <Link to={`/trading`}>Trading</Link>
-                              </li>
-                            );
-                          })}
-                          {data.menus
-                            .filter(item => item === "Reasearch")
-                            .map(t => {
-                              return (
-                                <li>
-                                  <Link to={`/reasearch`}>Reasearch</Link>
-                                </li>
-                              );
-                            })}
-                  {data.menus
-                    .filter(item => item === "Blogs")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Blogs`}>Blogs</Link>
-                        </li>
-                      );
-                    })}
-
-                  {data.menus
-                    .filter(item => item === "Work")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Work`}>Work</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
-                    .filter(item => item === "Testimonials")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Testimonials`}>Testimonials</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Photos`}>Photos</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
-                    .filter(item => item === "Contact")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Contact`}>Contact</Link>
-                        </li>
-                      );
-                    })}
+                      )}
+                  })}
                 </ul>
               </div>
             ) : (
@@ -150,26 +68,8 @@ export default class Header extends Component {
                   }}
                 >
                   <li>
-                    <Link to="/#home">Home</Link>
+                    <Link to="/">Home</Link>
                   </li>
-                  {data.menus
-                    .filter(item => item === "Blogs")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to="/blogs">Blogs</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to="/photos">Photos</Link>
-                        </li>
-                      );
-                    })}
                 </ul>
               </div>
             )}
