@@ -25,18 +25,19 @@ export default class Header extends Component {
                 )}
               </Link>
             </div>
-            <div
+            <div role="button" tabIndex={0}
               className="responsive-menu"
+              onKeyDown=""
               onClick={() => {
                 this.setState({
                   menu: !menu
                 });
               }}
-            >
+              >
               <span></span>
             </div>
               <div className="menu">
-                <ul
+                <ul onKeyDown=""
                   onClick={() => {
                     this.setState({
                       menu: false
@@ -46,7 +47,7 @@ export default class Header extends Component {
                   <li>
                     <Link to="/">Home</Link>
                   </li>
-                  {data.contentfulSiteInformation.menus.map((menu, index) => {
+                  {data.contentfulSiteInformation.menus.map((menu, index) =>  {
                     let page = data.allContentfulPages.edges.find(item => item.node.title === menu);
                     if(page) {
                       return (
