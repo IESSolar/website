@@ -35,7 +35,6 @@ export default class Header extends Component {
             >
               <span></span>
             </div>
-            {header === "home" ? (
               <div className="menu">
                 <ul
                   onClick={() => {
@@ -58,21 +57,7 @@ export default class Header extends Component {
                   })}
                 </ul>
               </div>
-            ) : (
-              <div className="menu">
-                <ul
-                  onClick={() => {
-                    this.setState({
-                      menu: false
-                    });
-                  }}
-                >
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                </ul>
-              </div>
-            )}
+            }
           </div>
         </div>
       </header>
